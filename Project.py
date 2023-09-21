@@ -742,23 +742,3 @@ def Run_Sim(Simulation_time,warm_up,batch,Confidence):
             Stastics_Simulation(create_objects_stats(calc_batchs(EntityTypeDict[i]["type_q_time"],batch,warm_up),"Q TIME"),"Q TIME",True,Confidence)
             Stastics_Simulation(create_objects_stats(calc_batchs(EntityTypeDict[i]["type_task_time"],batch,warm_up),"TASK TIME"),"TASK TIME",True,Confidence)
 
-
-#example of using
-
-simulation_duration =200000.0
-NumberofBatch=13
-
-new_resource(capacity=2, average_service_time=7.0,next_task_probability=[0,0.2,0.4,0.1,0.3])
-new_resource(capacity=2, average_service_time=7.0)
-new_resource(capacity=2, average_service_time=7.0)
-new_resource(capacity=2, average_service_time=7.0)
-new_resource(capacity=2, average_service_time=7.0)
-new_setofresource([2,3])
-""" ressource's creation"""
-assigned_route2 = [1,2,3,4,5]  
-assigned_route = [6]        
-new_entity_type(arrival_rate=10,show_summary=False,assigned_route=assigned_route2)
-new_entity_type(arrival_rate=2,show_summary=False,assigned_route=assigned_route,show_log=False)
-""" entity's creation"""
-
-Run_Sim(simulation_duration,3000,NumberofBatch,0.90)
