@@ -288,7 +288,6 @@ def new_setofresource(listofresources,defer_rate = None, next_task_probability =
 
 def new_resource(capacity, average_service_time, defer_rate = None, next_task_probability = None):
     """Function to create a new resource and add it to the ResourceList
-    - :att:`env` -> :class:`~simpy.core.Environment`
     - :att:`capacity` -> number of entities that can be assigned to the resource at one time
     - :att:`average_service_time` -> average time it takes to complete a task
     - :att:`defer_rate` -> probability that an entity will be deferred from a task
@@ -315,7 +314,6 @@ def new_resource(capacity, average_service_time, defer_rate = None, next_task_pr
 def new_entity_type(arrival_rate, start_task = None, assigned_route = None, priority = 0, start_delay = None, max_arrivals = None, 
                     max_tasks = None, max_time = None, allow_repeats = False, show_log = False, show_summary= True):
     """Function to create a new entity type and add it to the EntityTypeDict
-    - :att:`env` -> :class:`~simpy.core.Environment`
     - :att:`arrival_rate` -> average number of entities that arrive per hour
     - :att:`start_task` -> task entity starts at
     - :att:`assigned_route` -> list of tasks entity is assigned to
