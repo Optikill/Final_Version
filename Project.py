@@ -727,7 +727,12 @@ def create_objects_stats(batchs,name):
     return objetcs_stats
 
 def Run_Sim(Simulation_time,warm_up,batch,Confidence):
-    
+    """Function to run the simulation
+    - :att:`Simulation_time` -> Simulation Time
+    - :att:`warm_up` -> Warm-up Time
+    - :att:`batch` -> Number of Batch
+    - :att:`Confidence` -> confidence interval for simulation statistics
+    """
     
     env.run(until=Simulation_time)
     
